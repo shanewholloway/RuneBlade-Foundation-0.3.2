@@ -1,0 +1,274 @@
+<?xml version='1.0'?>
+<history title='RuneBlade Foundation History' xmlns:xhtml='http://www.w3.org/1999/xhtml' xmlns='http://namespaces.runeblade.com/product/history' >
+
+    <about>
+        RuneBlade Foundation is a set of tools that have been created to ease the 
+        development of XML-based applications written in Python.  Now, you say,
+        there are a lot of XML based tools out there.  Well, these tools are not
+        tools that help one move XML, but rather use XML and Python to breath 
+        abundant life into applications.  For instance, using XML via Jabber for
+        communications; XML "skin" for a wxPython GUI; or, an XML "skin" for xhtml 
+        or svg output, like Albatross or other templating engines.
+
+        $Id: CHANGES,v 1.47 2002/09/19 02:34:16 sholloway Exp $
+    </about>
+
+    <copyright>
+        Copyright (C) 2002  Shane Holloway &lt;shane.holloway@runeblade.com&gt;
+        All rights reserved, see LICENSE for details.
+    </copyright>
+
+    <release title='RuneBlade Foundation' version='0.3.2' date='2002.09.19'>
+        Celebration for wxPython 2.3.3, including other optimizations and bugfixes.
+
+        <features title='Foundation'>
+            Added a LazyProperty that calls ClassFactory to instantiate a variable on the first reference.
+            Added a __hash__ method to WeakBind
+            Optimized XMLObjectify's _toXML to run a bit faster
+            Optimized some dervied SkinObjects to disregard PCData if they didn't use it
+            Seperated ObjectifiedXML to derive from AttributedObjectifiedXML (mixin) and BaseObjectifiedXML
+            BaseObjectifiedXML can have AttributedObjectifiedXML added at runtime as an Aspect
+            Moved BaseObjectifiedXML's __getattribute__ into ObjectifiedXML for speed reasons
+            Created 
+        </features>
+
+        <features title='Foundation.AOSubjectObserver'>
+            Refactored &amp; reworked the SubjectObserver package with concepts from the AspectOriented package, and created a new approach with cleaner distinctions.  I'm not yet finished, but you're welcome (encouraged even!) to peek &amp; suggest!
+            Added several Interfaces -- lean Subject, 'classic' Subject, Publisher
+            Added several AccessRules -- ignore, simple, protective, and semaphore
+            Added several LogicRule Collections -- List, Ordered List, Dictionary, and Set if you have Python 2.3 or it's set implementation
+            Added one LogicRule Notification strategy -- Simple iteration!  
+
+            Plans for more LogicRules: First-acknoledged, Composites, Categorical, Bidding, and other custom wx / jabber related.
+        </features>
+
+        <features title='Foundation.Skinning'>
+            Added an activex skin element to allow for straight insertion into skin files.
+            Added an invisible DOT skin element
+            Changed the interface of SkinContext slightly in order to be more flexable
+        </features>
+
+        <features title='Foundation.wxTools'>
+            Added a wxActiveXWrapper module to add some functionality to wxPython.lib.activexwrapper, and to support the activex skin element.
+        </features>
+
+        <bugfixes>
+            Fixed a major bug in XMLBuilder/XMLObjectify with namespace prefix problems on _toXML
+            Changed XMLObjectify's _toXML to include the namespace in the result, rather than assume it's correct
+            Fixed wxTools.wxFrameMover and wxTools.wxLockingFrame synergies so things don't "vibrate"
+            Optimized a lot of code using the Python 2.3 profiler and some instrumented tests.
+            Fixed some naming and comparison problems in WeakBind
+            Fixed some itereation issues in DOT Skinning
+            Fixed an ordering issue in wxPythonSkin/layout.py to work with <xhtml:a href='http://wxpython.org/'>wxPython 2.3.3.1</xhtml:a>
+            Fixed an assertion in wxPythonSkin/text.py to work with <xhtml:a href='http://wxpython.org/'>wxPython 2.3.3.1</xhtml:a>; wxTE_PROCESS_ENTER is not allowed in conjunction with multiline controls.
+        </bugfixes>
+    </release>
+
+    <release title='RuneBlade Foundation' version='0.3.1' date='2002.08.27'>
+        New features, new demos, new bugfixes!
+        
+        <features title='Website'>
+            Changed to a generated site using skinning technology
+            Added an RSS source document for RuneBlade Foundation news!
+        </features>
+
+        <features title='Demos'>
+            Added a PythonCard interoperability demo
+            Added a simple chat skinned wx Jabber demo 
+        </features>
+
+        <features title='Foundation'>
+            Fleshed out XSD Converter a bit more, and factored some functionality into seperate classes
+        </features>
+
+        <features title='Foundation.AspectOriented'>
+            Added Aspect / Pointcut / Advice modules
+        </features>
+
+        <features title='Foundation.Skinning'>
+            Added a 'element_factory' tag, and a 'element_factory_set' tag to allow for modifying the element lookup table on the fly.
+            Added py:module to address being able to completely define a UI in skin files
+            Rearranged py:inline so py:module could effectively inherit from it
+            Added a ctx alais for context in SkinObject
+            Added inline semantics for the py:import element
+            Added event_handler for being able to "push" another event handler in
+            Added event and command_event elements to allow for creating event hooks without py:inline
+            Added pythonskin.vim for all those vimmers out there
+            Added ElementFactory.CachedTryList to optimize and complement ElementFactory.TryList
+        </features>
+
+        <bugfixes>
+            Fixed dot skins for node names that contain spaces
+            Changed Subject/Observer Subject class to refer to a Locked() method instead of a variable value
+            Added SkinObject.PopContext to mirror SkinObject.PushContext
+            Removed an invalid call to SetSizerDefaults from layout_flexgrid.py
+            Fixed templating issues with settings inheritence and a bit of optimization
+            Changed Foundation.Utilities.joinclean to take the joinstr first, then the data; then fixed affected code.
+            Optimized py:for, py:while, and py:if a bit
+            Updated wxSkinObject's namespace and locals eval support for more flexability and compatiblity with SkinObject
+        </bugfixes>
+    </release>
+
+    <!-- Release History -->
+
+    <release title='RuneBlade Foundation' version='0.3.0' date='2002.08.01'>
+        Large-reach public release
+
+        <features title='Website'>
+            Production website for future public releases.  (Thanks again Larry!)
+        </features>
+
+        <features title='Demos'>
+            Added an wxPython htmlwindow demo
+            Added an wxPython alpha blending demo (Windows 2000 and up only...)
+            Added an wxPython widget demo
+            Added an wxPython sash demo
+            Added an wxPython locking/docking demo
+            Added an xhtml skinned demo
+            Added a state machine demo
+            Added a dot skinned demo
+            Added a Tkinter skin extension demo
+            Added a wxPython GLCanvas demo
+            Added a very simple Jabber example
+        </features>
+
+        <features title='Foundation'>
+            Refactored XMLBuilder/XMLObjectify/XMLClassBuilder for increased speed, flexibility, and xml namespace features
+            Added XSDObjectifier
+        </features>
+
+        <features title='Foundation.Jabber'>
+            Refactored JabberConnection/Client framework in accordance with XMLClassBuilder
+        </features>
+
+        <features title='Foundation.SubjectObserver'>
+            Added ProxySubjects
+        </features>
+
+        <features title='Foundation.Skinning'>
+            Added skin unravling for memory conservation and resturcturing of skinned trees
+            Refactored skinning framework in accordance with XMLObjectify/XMLClassBuilder
+            Added py:for, py:while, py:if, and py:import to xmlPython skins
+            Added xhtml skin support
+            Added sizing to the the wxPythonSkin frame_mover
+            Added rollover bitmaps to bitmap_button and bitmap nodes
+            Added objectify skin support with substitution support
+            Added a skin:template node, duplicating to py: and XO:
+            Added an XO:invisible tag
+            Refactored StateSkin subsystem to be more consistent
+            Added DOT skin support.  See <xhtml:a href='http://www.research.att.com/sw/tools/graphviz/'>GraphViz</xhtml:a> for more information
+            Added more skin setting inheritence framework.  Use skin:inherit/skin:save/skin:level to use them now, as they are in a proper namespace
+            Added svg skin support
+        </features>
+
+        <features title='Foundation.wxTools'>
+            Added AlphaBlending utility for windows
+        </features>
+
+        <bugfixes>
+            Changed some eval calls to int calls for speed reasons
+            Removed sizer*Default in favor of "inheritsettings"/"savesettings" (and it's faster!)
+            Factored out some standard string to list functionality
+            Added some public functions to Skinning.SkinContext to make it more friendly to work with
+            Fixed SubjectObserver.StateMachine to be more correct
+            SkinObject.PushContext() now returns the context it replaced
+            Added unravel and unravelnode as optional attributes for all nodes deriving from SkinObject
+            Fixed SkinObject's inheritsettings order so that the specified attributes have a higher priority than the inherited settings
+            Renamed wxPythonSkin's "id" attribute to "wxid"
+            Moved XMLBuilder to a ChainedDict implementation (optimization)
+            Made "default attributes" qualified in XMLBuilder (by duplication)
+            More untracked bugfixes...
+        </bugfixes>
+    </release>
+
+    <release title='RuneBlade Foundation' version='0.2.0' date='2002.07.03'>
+        Small-reach initial public release
+
+        <features title='Website'>
+            Prototyped website for initial public release
+        </features>
+
+        <features title='Demos'>
+            Created a Skinning demo area
+            Moved the existing skinning test/demos to Demos/Skinning/Messy
+        </features>
+
+        <features title='Docs'>
+            Created a TODO list in Docs/Todo/Todo.html
+            Added a lot of module documentation... but there is much more to be done.
+            Built module documentation with HappyDoc from http://happydoc.soureforge.net
+        </features>
+
+        <features title='Foundation.SubjectObserver'>
+            Added priorities to controll the order in which observers are called
+            Added StateMachine subjects
+            Added Scheduler Subject
+        </features>
+
+        <features title='Foundation.Jabber'>
+            Added conference support
+            Refactored to provide for developing Jabber components
+        </features>
+
+        <features title='Foundation.Skinning'>
+            Added wxOGL skin support (thanks Brian)
+            Added state skin support (thanks Brian)
+
+            Added sashes to wxPython skins
+            Added subject/observer event handler support to wxPython skins
+            Added locking frame support to wxPython skins
+            Added frame movers support to wxPython skins
+        </features>
+
+        <features title='Foundation.wxTools'>
+            Added EvtHandler based on the SubjectObserver package
+            Added EvtHandler for draging the frame from other windows
+            Added locking frame support
+            Added frame position saving class
+        </features>
+
+        <bugfixes>
+            Too many to list...
+        </bugfixes>
+    </release>
+
+    <release title='RuneBlade Foundation' version='0.1.0' date='2002.03.31'>
+        Initial private alpha release
+
+        <features title='Foundation'>
+            Added ContextApply
+            Added WeakBind
+            Added SmartSelect
+            Added XMLBuilder
+            Added XMLObjectify
+            Added XMLClassBuilder
+        </features>
+
+        <features title='Foundation.SubjectObserver'>
+            Added Simple Subject / Observers
+            Added Categorized Subject / Associated Observers
+            Added Attributed Subject
+            Added Bidable Subject / Bidding Observers
+        </features>
+
+        <features title='Foundation.Skinning'>
+            Created basic skinning framework
+            Added support for wxPython toolkit
+            Added python-oriented tags in xml
+        </features>
+
+        <features title='Foundation.Jabber'>
+            Added JID class
+            Added auth: plaintext, sha1
+            Added roster request / updates
+            Added presence subscribe / post / unsubscribe
+            Added iq responses / requests
+            Added Client based on XMLBuilder and XMLObjectify
+            Added Subject/Observer event-based architecture
+        </features>
+
+        <bugfixes>
+            None
+        </bugfixes>
+    </release>
+</history>

@@ -1,0 +1,37 @@
+Metadata-Version: 1.0
+Name: RuneBlade-Foundation
+Version: 0.3.2
+Summary: UNKNOWN
+Home-page: http://www.runeblade.com/
+Author: Shane Holloway
+Author-email: shane.holloway@runeblade.com
+License: LGPL (http://www.fsf.org/licenses/lgpl.txt)
+Description: RuneBlade Foundation Components
+        
+        XML Objectify Inspiration:
+        David Mertz at Gnosis software just has a head for Python,
+        and for thinking out of his dodecahedron, as he seems to
+        be very many sided.  One of my favorites of his work takes
+        XML and makes it read like Python.  I couldn't be more at
+        home, unless I made it my own.  Oh wait, thats what this is
+        about, isn't it?
+        
+        Please see http://gnosis.cx
+        
+        Skinning:
+        wxPython is a great cross platform windowing toolkit.  This
+        xml "resource" toolkit is similar to many others, only it is
+        allowed to wiggle because it is python powered!
+        
+        Please see http://www.wxpython.org
+        
+        Jabber:
+        Well, I never thought I'd meet a talking snake, much less teach
+        one to chat.
+        
+        Please see http://www.jabber.org
+        
+Keywords: RuneBlade,skinning,wxPython,locking,docking,jabber,subject,observer,publish,subscribe,notification,select,weakbind,xml,objectify,xmlobjectify
+Platform: Linux
+Platform: BSD
+Platform: Windows

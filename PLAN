@@ -1,0 +1,56 @@
+<?xml version='1.0'?>
+<history title='RuneBlade Foundation Planning' xmlns:xhtml='http://www.w3.org/1999/xhtml' xmlns='http://namespaces.runeblade.com/product/history' >
+
+    <about>
+        RuneBlade Foundation is a set of tools that have been created to ease the 
+        development of XML-based applications written in Python.  Now, you say,
+        there are a lot of XML based tools out there.  Well, these tools are not
+        tools that help one move XML, but rather use XML and Python to breath 
+        abundant life into applications.  For instance, using XML via Jabber for
+        communications; XML "skin" for a wxPython GUI; or, an XML "skin" for xhtml 
+        or svg output, like Albatross or other templating engines.
+
+        $Id: PLAN,v 1.2 2002/09/09 07:23:55 sholloway Exp $
+    </about>
+
+    <copyright>
+        Copyright (C) 2002  Shane Holloway &lt;shane.holloway@runeblade.com&gt;
+        All rights reserved, see LICENSE for details.
+    </copyright>
+
+    <!-- Release Plans -->
+
+    <planned_release title='RuneBlade Foundation' version='0.3.1' date='2002.09.01'>
+        <features title='Jabber'>
+            Add component support
+            Add effecient XML router
+            Add an implementation of PubSub
+            Add an implementation of disco
+        </features>
+
+        <features title='Foundation'>
+            Explore the use of AOP in XMLObjectify/Skinning/SubjectObserver
+        </features>
+
+        <features title='Skinning'>
+            Support for Tkinter?
+            Support for win32?
+            Support for PyQt?
+            Support for PyKDE?
+            Support for PyGTK?
+        </features>
+
+        <features title='Demos'>
+            Aspect Oriented demos
+            
+        </features>
+        <features title='Docs'>
+            TeX Documentation on Skinning and an example for each skin type (???)
+            TeX Documentation on Jabber and an example (???)
+            TeX Documentation on SubjectObserver and an example (???)
+            LiterateProgramming example using a lot of RuneBlade(???)
+        </features>
+
+    </planned_release>
+
+</history>

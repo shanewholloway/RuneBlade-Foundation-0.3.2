@@ -1,0 +1,87 @@
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~ License 
+#~ 
+#- The RuneBlade Foundation library is intended to ease some 
+#- aspects of writing intricate Jabber, XML, and User Interface (wxPython, etc.) 
+#- applications, while providing the flexibility to modularly change the 
+#- architecture. Enjoy.
+#~ 
+#~ Copyright (C) 2002  TechGame Networks, LLC.
+#~ 
+#~ This library is free software; you can redistribute it and/or
+#~ modify it under the terms of the BSD style License as found in the 
+#~ LICENSE file included with this distribution.
+#~ 
+#~ This software is OSI Certified Open Source Software.
+#~ OSI Certified is a certification mark of the Open Source Initiative.
+#~ 
+#~ TechGame Networks, LLC can be reached at:
+#~ 3578 E. Hartsel Drive #211
+#~ Colorado Springs, Colorado, USA, 80920
+#~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~ RuneBlade Foundation Readme
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+RuneBlade Foundation is a set of GUI skinning and other tools created to ease
+the development of XML-based applications.  Application such as Jabber (XML) 
+for communications; XML "skin" for a wxPython GUI; or, an XML "skin" for 
+xhtml or svg output similar to other templating engines.
+
+More information, including distributables, can be found at 
+http://www.runeblade.com/foundation/ or by contacting the author at
+shane.holloway@runeblade.com
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~ Included
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+RuneBlade Foundation Release 0.3.0 includes:
+
+    Base Tools:
+        Utilities for WeakBinding and ContextApply wrappers for callable
+        objects.  XML Builder / XML Objectifier / XML Class Builder tools
+        for truly object oriented XML on pythonic terms.
+
+    Jabber Tools: 
+        An XML-based messaging system.  See http://jabber.org
+
+    Skinning Framework: 
+        Base framework for inheritable attributes, etc.
+        Python-in-xml skin implementation, for creating skins that are alive.
+        wxPython skin production implementation.  (See http://wxpython.org)
+        DOT output.  (See http://www.research.att.com/sw/tools/graphviz/)
+        xhtml/svg templated output.
+
+    Subject Observer:
+        Tools modeled after their classic namesake, helping to create an 
+        event-based architecture.  Used heavily by both the Skinning and 
+        Jabber frameworks.
+
+    wxTools:
+        A bag O tricks for wxPython. (wxPython was the first skin, 
+        and as such, gets all the attention...)
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~ Installing
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+From the source distribution, simply:
+
+    python setup.py install
+
+Just have to love Python, eh?
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~ Other Files of Interest
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You might want to have a look at the following files:
+    CHANGES
+    THANKS
+    INSTALL
+    LICENSE
+
